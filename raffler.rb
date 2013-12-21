@@ -6,10 +6,10 @@ module Raffler
 
   def raffle points, category
 
-    word = @points[points][category].sample[0..-2]
+    word = @words[points][category].sample[0..-2]
 
     while @@chosen_words.include? word
-      word = @points[points][category].sample[0..-2]
+      word = @words[points][category].sample[0..-2]
       #tratar o caso em que todas as palavras foram sorteadas
     end
 

@@ -73,20 +73,33 @@ module Loader
 
   def load_teams
     
-    puts "-Loading Teams."
+    puts "-Loading Teams..."
 
     teams =[]
+    i=0
 
     File.readlines("configs/teams.txt").each do |line|
-      team_members = []
-      team_members = line.split(" e ")
-      teams << Team.new(team_members)
+      teams << Team.new(line.split(" e "), i+=1)
     end
 
     puts "-Teams loaded successfully."
     return teams
 
+  end
 
+  def load_commands
+    puts "-Loading Commands..."
+
+    puts "-Commands loaded successfully."
+
+    {
+      "Animal" => :animal,
+      "Difícil" => :hard,
+      "Lugar" => :place,
+      "Atividade" => :activity,
+      "Lazer" => :leisure,
+      "Pessoa" => :person,
+    }
   end
 
 end

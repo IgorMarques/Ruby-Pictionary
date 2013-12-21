@@ -2,10 +2,20 @@
 
 class Team
 
-  attr_reader :members
+  attr_reader :members, :number, :points
 
   @members =[]
-  def initialize (team_members)
+
+  def initialize (team_members, number)
     @members = team_members
+    @number = number
+    @points = 0
+  end
+
+  def print 
+    puts "\n----EQUIPE #{number}: #{@points} pontos----"
+    @members.each do |member|
+      puts member
+    end
   end
 end
