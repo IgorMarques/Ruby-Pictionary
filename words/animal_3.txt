@@ -25,3 +25,8 @@ Crocodilo
 Poney
 Tiranossauro Rex
 Tigre Dente de Sabre
+Boto
+Jibóia
+Pica-Pau
+Peixe-espada
+Arraia
