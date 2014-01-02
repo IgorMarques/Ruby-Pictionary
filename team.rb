@@ -2,7 +2,7 @@
 
 class Team
 
-  attr_reader :members, :number, :points
+  attr_accessor :members, :number, :points
 
   @members =[]
 

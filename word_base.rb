@@ -19,14 +19,20 @@ class WordBase
 
     word = @words[points][category].sample[0..-2]
 
+    looptime=0
     while @chosen_words.include? word
       word = @words[points][category].sample[0..-2]
+
+      looptime+=1
       #tratar o caso em que todas as palavras foram sorteadas
+      if looptime == 5
+        puts "Todas as palavras dessa categoria já foram sorteadas!"
+      end
     end
 
     @chosen_words << word
   
-    puts "A palavra sorteada é #{UnicodeUtils.upcase(word)} e vale #{points}"
+    "A palavra sorteada é #{UnicodeUtils.upcase(word)} e vale #{points}"
   end
 
 end

@@ -67,8 +67,6 @@ module Loader
       "6" => six,
     }
 
-    
-
   end
 
   def load_teams
@@ -102,4 +100,19 @@ module Loader
     }
   end
 
+  def load_map
+    map=[]
+    possible_choices={
+      "A\n" => :open,
+      "E\n" => :choose,
+      "F\n" => :closed,
+    }
+
+    File.readlines("configs/map.txt").each do |line|
+      map << possible_choices[line]
+
+    end
+
+    map
+  end
 end
