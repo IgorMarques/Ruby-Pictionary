@@ -25,7 +25,7 @@ class WordBase
 
       looptime+=1
       #tratar o caso em que todas as palavras foram sorteadas
-      if looptime == 5
+      if looptime == 100
         puts "Todas as palavras dessa categoria já foram sorteadas!"
       end
     end

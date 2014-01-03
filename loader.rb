@@ -97,6 +97,7 @@ module Loader
       "Atividade" => :activity,
       "Lazer" => :leisure,
       "Pessoa" => :person,
+      "Objeto" => :object,
     }
   end
 

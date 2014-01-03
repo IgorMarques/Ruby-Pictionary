@@ -24,7 +24,7 @@ class Game
     @pontuations = @words.pontuations
     @map = load_map
     @team_count = @teams.length
-    @total_points =  5 #@map.length
+    @total_points =  @map.length
 
     print_teams
   end
@@ -162,8 +162,17 @@ end
 
     break_line
 
-    puts "PRESSIONE ENTER PARA INICIAR O ROUND"
-    gets
+    while true
+      puts "PRESSIONE X PARA INICIAR O ROUND OU O PARA SORTEAR OUTRA PALAVRA"
+      l = gets
+
+      if l == "o\n"
+        puts @words.raffle(current_pontuation, @commands[current_category])
+        break_line
+      else 
+        break
+      end
+    end
 
     winner = (wait current_house, team) -1
 
